@@ -1,0 +1,67 @@
+.mat-card {
+  position: absolute;
+  top: 60px;
+  right: 50px;
+}
+
+::ng-deep .mat-sort-header-content {
+  flex-wrap: wrap;
+}
+
+.table-header {
+  margin-block: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .header-group {
+    display: flex;
+    gap: 15px;
+  }
+  .pagination-header {
+    .mat-paginator-outer-container {
+      display: flex;
+    }
+  }
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-wrapper {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.icon-display {
+  transform: scale(1.5);
+  padding-inline-end: 0.2rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+::ng-deep .mat-form-field.isSearchable {
+  display: block;
+  width: auto;
+  .mat-sort-header-content {
+    padding-block: 15px;
+  }
+}
+
+.mat-header-cell {
+  text-transform: capitalize;
+}
+
+.no-records {
+  background: white;
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.54);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}

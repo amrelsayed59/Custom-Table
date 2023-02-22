@@ -1,0 +1,23 @@
+<!-- <p>{{ translationPrefix + "dashboard" | translate }}</p> -->
+
+<div class="px-3 my-3">
+  <app-custom-table
+    [tableData]="orders"
+    [tableColumns]="ordersTableColumns"
+    [enableSorting]="true"
+    [numericColumns]="['amount', 'price', 'discount']"
+    [isGlobalSearch]="true"
+    [isPageableTop]="false"
+    [isPageableBottom]="true"
+    [isCustomColumn]="true"
+    [dragEnabled]="false"
+    [isFilterable]="true"
+    [isSearchable]="false"
+    [paginationSizes]="[5, 10, 15, 20]"
+    [defaultPageSize]="5"
+    (columnsChange)="columnsChange($event)"
+    (rowAction)="rowAction($event)"
+    [rowActionIcon]="['delete', 'edit', 'copy']"
+  >
+  </app-custom-table>
+</div>

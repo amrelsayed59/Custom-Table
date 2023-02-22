@@ -1,0 +1,41 @@
+<button mat-icon-button class="close-button" (click)="onNoClick()">
+  <mat-icon class="close-icon" color="warn">close</mat-icon>
+</button>
+
+<h2 mat-dialog-title>{{ data.title }}</h2>
+
+<div mat-dialog-content>
+  <p>{{ data.message }}</p>
+
+  <!-- Custom Column -->
+  <div class="custom-column">
+    <ng-container *ngFor="let col of tableColumns">
+      <mat-checkbox [(ngModel)]="col.show" (change)="onColumnChange()">{{
+        col.name
+      }}</mat-checkbox>
+    </ng-container>
+  </div>
+
+  <app-custom-table
+    [tableColumns]="tableColumns"
+    [tableData]="tableData"
+    [dragEnabled]="true"
+    [defaultPageSize]="1"
+    [isPageableTop]="true"
+    [enableSorting]="false"
+    (sortedColumn)="onSortedColumn($event)"
+  >
+  </app-custom-table>
+</div>
+
+<div mat-dialog-actions class="footer-modal">
+  <button
+    mat-raised-button
+    color="primary"
+    cdkFocusInitial
+    (click)="selectItem()"
+  >
+    Save
+  </button>
+  <button mat-raised-button color="warn" (click)="onNoClick()">Close</button>
+</div>

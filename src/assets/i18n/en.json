@@ -1,0 +1,14 @@
+{
+  "PAGES": {
+    "NAVBAR": {
+      "INPUTS": {
+        "language": "Language",
+        "arabic": "Arabic",
+        "english": "English",
+        "dashboard": "Dashboard",
+        "campaignTeam": "Campaign Team",
+        "main-menu": "Main Menu"
+      }
+    }
+  }
+}
